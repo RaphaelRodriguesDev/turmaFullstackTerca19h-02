@@ -1,0 +1,7 @@
+- RegraDeNomeacaoJS
+- DevTools
+- ConcatenacaoStrings
+- ConvertendoTipos
+- Continuação do arquivo de Logica02
+- IfElse
+- Prompt

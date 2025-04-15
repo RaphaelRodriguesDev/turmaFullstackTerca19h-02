@@ -1,0 +1,31 @@
+<script>
+  let nota1 = Number(prompt("Digite a primeira nota"));
+  let nota2 = Number(prompt("Digite a segunda nota"));
+  let nota3 = Number(prompt("Digite a terceira nota"));
+  let nota4 = Number(prompt("Digite a quarta nota"));
+
+  let media = (nota1 + nota2 + nota3 + nota4) / 4;
+
+  document.write(`A média do aluno é: ${media} <br>`);
+
+  // if (media >= 7.0) {
+  //   document.write(`Situação do aluno: APROVADO`)
+  // } else if (media < 5.0) {
+  //   document.write(`Situação do aluno: REPROVADO`)
+  // } else {
+  //   document.write(`Situação do aluno: EM RECUPERAÇÃO`);
+  // }
+
+  if (media >= 7.0) {
+    document.write(`Situação do aluno: APROVADO`)
+  } else {
+    if (media < 5.0) {
+      document.write(`Situação do aluno: APROVADO`)
+    } else {
+      document.write(`Situação do aluno: EM RECUPERAÇÃO`)
+    }
+  } 
+
+  
+
+</script>
