@@ -8,10 +8,12 @@
 
   let resposta;
   do {
-    resposta = prompt("Digite 'Sim' para continuar ou 'Não' para cancelar:");
-    if (respost === 'Sim') {
+    resposta = prompt("Digite 'SIM' para continuar ou 'NÃO' para cancelar:")
+      .toUpperCase()
+      .trim();
+    if (resposta === 'SIM') {
       console.log("Você escolheu continuar!");
     }
-  } while (resposta === 'Sim');
+  } while (resposta === 'SIM');
 
 </script>
