@@ -1,0 +1,13 @@
+<script>
+
+  let qtdProduto = Number(prompt("Adicione a quantidade de produtos que você quer adicionar"));
+  const produtos = [];
+
+  // Laço para coletar produtos
+  for (let i = 0; i < qtdProduto; i++) {
+    let nome = prompt(`Digite o nome do produto ${i + 1}:`);
+    produtos.push(nome);
+    document.write(produtos[i] + "<br>")
+  }
+
+</script>
