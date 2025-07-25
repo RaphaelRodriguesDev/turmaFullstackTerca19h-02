@@ -68,7 +68,15 @@ function menu() {
       "Escolha uma opção:\n1. Adicionar produto\n2. Listar produtos\n3. Editar quantidade\n4. Deletar produto\n5. Sair"
     );
 
-    switch (opcao) {
+    // Verifica se o usuário clicou em "Cancelar" no prompt (retorna null)
+    if (opcao === null) {
+      alert("Operação cancelada.");
+      break;
+    }
+
+    switch (
+      opcao.trim() // Remove espaços em branco da entrada
+    ) {
       case "1":
         adicionarProduto();
         break;
@@ -83,8 +91,7 @@ function menu() {
         break;
       case "5":
         alert("Saindo...");
-        break;
-
+        return; // Usa return para sair da função diretamente
       default:
         alert("Opção inválida.");
         break;
