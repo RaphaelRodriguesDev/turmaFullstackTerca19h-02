@@ -56,7 +56,7 @@ function deletarProduto() {
     parseInt(prompt("Digite o número do produto para deletar:")) - 1;
   if (index >= 0 && index < listaProdutos.length) {
     const produtoRemovido = listarProdutos.splice(index, 1)[0];
-    alert(`Produto "${produtoRemovido.nome}" deletado com sucesso!`);
+    alert(`Produto "${produtoRemovido[0].nome}" deletado com sucesso!`);
   } else {
     alert("Produto não encontrado.");
   }
