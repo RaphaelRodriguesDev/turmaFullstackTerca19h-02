@@ -3,6 +3,6 @@ let n2 = 20;
 
 // let verificador = n1 < n2 && n1 == 30; // AND | &&
 // let verificador = n1 < n2 || n1 == 20; // OU | ||
-let verificador = !(n1 == 30); // NOT | NÃO
+let verificador = !(n1 == 30); // NOT | NÃO | ! 
 
 console.log(verificador);
