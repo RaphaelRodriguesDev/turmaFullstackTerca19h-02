@@ -1,14 +1,13 @@
 <script>
   let senhaCorreta = "1234ABCD";
   let senhaDigitada = prompt("Digite a senha: ");
-  
-  // Normalizando a senha digitada
-  senhaDigitada = senhaDigitada.trim().toUpperCase()
 
-  if(senhaDigitada === senhaCorreta) {
+  // Normalizando a senha digitada
+  senhaDigitada = senhaDigitada.trim().toUpperCase();
+
+  if (senhaDigitada === senhaCorreta) {
     document.write("✅ Acesso Permitido!");
   } else {
     document.write("❌ Acesso Negado!");
   }
-  
 </script>
