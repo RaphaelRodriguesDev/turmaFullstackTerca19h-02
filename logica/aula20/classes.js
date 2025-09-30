@@ -7,7 +7,7 @@ class Veiculo {
 
   mostrarInfo() {
     console.log(
-      `Este é um ${this.tipo}, de cor ${this.cor}, e sua velocidade máxime é de ${this.velocidade} km/h.`
+      `Este é um ${this.tipo}, de cor ${this.cor}, e sua velocidade máxima é de ${this.velocidade} km/h.`
     );
   }
 }

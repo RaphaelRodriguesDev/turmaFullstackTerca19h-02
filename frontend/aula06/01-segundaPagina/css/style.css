@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+/* CSS Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  text-align: center;
+}
+
+h1 {
+  padding: 15px;
+  background-color: #282828;
+  color: #FFF;
+}
+
+ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #282828;
+  transition: 0.3s;
+}
+
+ul li a:link,
+ul li a:visited {
+  color: #282828;
+}
+
+ul li a:hover {
+  color: #ff7300;
+}
+
+ul li a:active {
+  color: #ff0000;
+}
+
+footer {
+  background-color: #282828;
+  padding: 10px;
+  color: #FFFFFF
+}
+
+

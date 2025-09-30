@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 05 - Formulário Corrigido</title>
+    <style>
+      body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+      nav ul { list-style: none; padding: 0; display: flex; gap: 20px; }
+      nav a { text-decoration: none; color: #333; }
+      fieldset { margin: 20px 0; padding: 15px; border: 1px solid #ccc; border-radius: 5px; }
+      legend { font-weight: bold; padding: 0 10px; }
+      label { display: block; margin: 10px 0 5px; font-weight: bold; }
+      input, select, textarea { padding: 8px; margin: 5px 0; border: 1px solid #ccc; border-radius: 3px; }
+      input[type="radio"], input[type="checkbox"] { margin-right: 5px; }
+      .form-group { margin: 15px 0; }
+      .inline-group { display: flex; gap: 15px; align-items: center; }
+      .range-container { display: flex; align-items: center; gap: 10px; }
+      button { padding: 10px 20px; margin: 10px 5px; border: none; border-radius: 5px; cursor: pointer; }
+      .btn-primary { background: #007bff; color: white; }
+      .btn-secondary { background: #6c757d; color: white; }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="#">Sobre</a></li>
+      </ul>
+    </nav>
+
+    <header>
+      <h1>Aula 05 - Formulário Corrigido</h1>
+    </header>
+
+    <main>
+      <form id="formulario-principal" novalidate>
+        
+        <fieldset>
+          <legend>Dados Pessoais</legend>
+          
+          <div class="form-group">
+            <label for="nome">Nome: *</label>
+            <input type="text" name="nome" id="nome" required minlength="2" />
+          </div>
+
+          <div class="form-group">
+            <label for="sobrenome">Sobrenome: *</label>
+            <input type="text" name="sobrenome" id="sobrenome" required minlength="2" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail: *</label>
+            <input type="email" id="email" name="email" placeholder="exemplo@dominio.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="senha">Senha: *</label>
+            <input type="password" name="senha" id="senha" required minlength="6" />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Informações Demográficas</legend>
+          
+          <div class="form-group">
+            <label>Sexo:</label>
+            <div class="inline-group">
+              <label><input type="radio" name="sexo" id="fem" value="feminino" /> Feminino</label>
+              <label><input type="radio" name="sexo" id="masc" value="masculino" /> Masculino</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Estados de interesse:</label>
+            <div>
+              <label><input type="checkbox" name="estados[]" value="RJ" /> Rio de Janeiro</label>
+              <label><input type="checkbox" name="estados[]" value="SP" /> São Paulo</label>
+              <label><input type="checkbox" name="estados[]" value="MG" /> Minas Gerais</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="pais">País:</label>
+            <select name="pais" id="pais">
+              <option value="" disabled selected>Selecione um país</option>
+              <optgroup label="América">
+                <option value="br">Brasil</option>
+                <option value="ar">Argentina</option>
+              </optgroup>
+              <optgroup label="Europa">
+                <option value="pt">Portugal</option>
+                <option value="es">Espanha</option>
+              </optgroup>
+            </select>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Contato</legend>
+          
+          <div class="form-group">
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" />
+          </div>
+
+          <div class="form-group">
+            <label for="url">Website:</label>
+            <input type="url" id="url" name="url" placeholder="https://exemplo.com" />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferências</legend>
+          
+          <div class="form-group">
+            <label for="cor">Cor favorita:</label>
+            <input type="color" id="cor" name="cor" value="#007bff" />
+          </div>
+
+          <div class="form-group">
+            <label for="range">Nível de interesse (0-100):</label>
+            <div class="range-container">
+              <input type="range" id="range" name="interesse" min="0" max="100" value="50" />
+              <output id="rangeValue">50</output>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="numero">Idade:</label>
+            <input type="number" id="numero" name="idade" min="1" max="120" />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Datas e Horários</legend>
+          
+          <div class="form-group">
+            <label for="data">Data de nascimento:</label>
+            <input type="date" id="data" name="nascimento" />
+          </div>
+
+          <div class="form-group">
+            <label for="hora">Horário preferido para contato:</label>
+            <input type="time" id="hora" name="horario_contato" />
+          </div>
+
+          <div class="form-group">
+            <label for="data_hora">Agendamento:</label>
+            <input type="datetime-local" id="data_hora" name="agendamento" />
+          </div>
+
+          <div class="form-group">
+            <label for="mes">Mês de interesse:</label>
+            <input type="month" id="mes" name="mes_interesse" />
+          </div>
+
+          <div class="form-group">
+            <label for="semana">Semana de disponibilidade:</label>
+            <input type="week" id="semana" name="semana_disponivel" />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Outros</legend>
+          
+          <div class="form-group">
+            <label for="arquivo">Anexar currículo:</label>
+            <input type="file" id="arquivo" name="curriculo" accept=".pdf,.doc,.docx" />
+          </div>
+
+          <div class="form-group">
+            <label for="pesquisa">Pesquisar:</label>
+            <input type="search" id="pesquisa" name="busca" placeholder="Digite sua busca..." />
+          </div>
+
+          <input type="hidden" id="id_oculto" name="id" value="123" />
+        </fieldset>
+
+        <div class="form-group">
+          <button type="submit" class="btn-primary">Enviar Formulário</button>
+          <button type="reset" class="btn-secondary">Limpar Campos</button>
+          <button type="button" id="botao" class="btn-secondary">Validar Dados</button>
+        </div>
+
+      </form>
+    </main>
+
+    <footer>
+      <p>&copy; Copyright 2025 | Todos os direitos reservados - Raphael Rodrigues</p>
+    </footer>
+
+    <script>
+      // Atualização do range em tempo real
+      const rangeInput = document.getElementById("range");
+      const rangeValue = document.getElementById("rangeValue");
+      
+      rangeInput.addEventListener("input", () => {
+        rangeValue.textContent = rangeInput.value;
+      });
+
+      // Validação customizada
+      const form = document.getElementById("formulario-principal");
+      const botaoValidar = document.getElementById("botao");
+
+      botaoValidar.addEventListener("click", () => {
+        if (form.checkValidity()) {
+          alert("Todos os campos obrigatórios estão preenchidos corretamente!");
+        } else {
+          alert("Por favor, preencha todos os campos obrigatórios.");
+          form.reportValidity();
+        }
+      });
+
+      // Submissão do formulário
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        
+        if (form.checkValidity()) {
+          const formData = new FormData(form);
+          console.log("Dados do formulário:");
+          for (let [key, value] of formData.entries()) {
+            console.log(`${key}: ${value}`);
+          }
+          alert("Formulário enviado com sucesso! Verifique o console para ver os dados.");
+        } else {
+          form.reportValidity();
+        }
+      });
+    </script>
+  </body>
+</html>

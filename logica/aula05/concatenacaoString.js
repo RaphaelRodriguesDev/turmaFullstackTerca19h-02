@@ -5,7 +5,7 @@ let n2 = 10;
 
 let nomeCompleto = nome + " " + sobrenome;
 
-// let expressão = n1 + " + " + n2 + " = " + (n1 + n2)
+// let expressao = n1 + " + " + n2 + " = " + (n1 + n2)
 let expressao = `${n1} + ${n2} = ${n1 + n2}`;
 
 // console.log(nomeCompleto);

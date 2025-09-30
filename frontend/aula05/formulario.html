@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 05 - Formulário</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="#">Sobre</a></li>
+      </ul>
+    </nav>
+
+    <header>
+      <h1>Aula 05 - Formulário</h1>
+    </header>
+
+    <main>
+      <form>
+        <label for="nome">Nome:</label><br />
+        <input type="text" name="nome" id="nome" required/><br />
+
+        <label for="sobrenome">Sobrenome:</label><br />
+        <input type="text" name="sobrenome" id="sobrenome" /><br />
+
+        <label for="senha"> Senha: </label> <br />
+        <input type="password" name="senha" id="senha" /><br />
+
+        <label for="email">E-mail:</label><br />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="exemplo@dominio.com"
+        />
+
+        <!-- Botão Radio -->
+        <p>Selecione seu sexo (Masculino ou Feminino)</p>
+        <input type="radio" name="sexo" id="fem" />
+        <label for="fem">Feminino</label>
+        <input type="radio" name="sexo" id="masc" />
+        <label for="masc">Masculino</label>
+
+        <!-- Checkbox -->
+        <p>Selecione estados</p>
+        <input type="checkbox" name="rj" id="rj" value="RJ" />
+        <label for="rj">Rio de Janeiro</label><br />
+        <input type="checkbox" name="sp" id="sp" value="SP" />
+        <label for="sp">São Paulo</label><br />
+        <input type="checkbox" name="mg" id="mg" value="MG" />
+        <label for="mg">Minas Gerais</label><br />
+
+        <!-- Campo para seleção de opções -->
+        <select name="pais" id="pais">
+          <option value="" disabled selected>Selecione um país</option>
+          <optgroup label="América">
+            <option value="br">Brasil</option>
+            <option value="ar">Argentina</option>
+          </optgroup>
+
+          <optgroup label="Europa">
+            <option value="pt">Portugal</option>
+            <option value="es">Espanha</option>
+          </optgroup></select
+        ><br />
+
+        <!-- Botão para enviar formulário -->
+        <!-- <label for="enviar">Enviar:</label> -->
+        <input type="submit" value="Enviar" id="enviar" /><br />
+
+        <!-- Botão genérico, geralmente usado com JavaScript -->
+        <!-- <label for="botao">Botão:</label> -->
+        <input type="button" id="botao" value="Clique Aqui" />
+
+        <!-- Permite upload de arquivos -->
+        <label for="arquivo">Arquivo:</label>
+        <input type="file" id="arquivo" /><br />
+
+        <!-- Campo invisível para enviar dados ocultos -->
+        <label for="id_oculto">ID Oculto:</label>
+        <input type="hidden" id="id_oculto" name="id" value="123" /><br />
+
+        <!-- Botão de envio como imagem -->
+        <label for="imagem">Imagem:</label>
+        <input type="image" id="imagem" src="imagem.png" alt="Enviar" /><br />
+
+        <!-- Botão para resetar os campos do formulário -->
+        <label for="limpar">Limpar:</label>
+        <input type="reset" id="limpar" value="Limpar" /><br />
+
+        <!-- Campo para números, com limites opcionais -->
+        <label for="numero">Número:</label>
+        <input type="number" id="numero" min="1" max="100" /><br />
+
+        <!-- Controle deslizante para selecionar um valor -->
+        <label for="range">Intervalo:</label>
+        <input type="range" id="range" min="0" max="100" /><br />
+        <output id="rangeValue">50</output><br />
+
+        <!-- Campo para selecionar uma data -->
+        <label for="data">Data:</label>
+        <input type="date" id="data" /><br />
+
+        <!-- Campo para selecionar um horário -->
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" /><br />
+
+        <!-- Campo para data e hora combinadas -->
+        <label for="data_hora">Data e Hora:</label>
+        <input type="datetime-local" id="data_hora" /><br />
+
+        <!-- Campo para selecionar mês e ano -->
+        <label for="mes">Mês:</label>
+        <input type="month" id="mes" /><br />
+
+        <!-- Campo para selecionar uma semana -->
+        <label for="semana">Semana:</label>
+        <input type="week" id="semana" /><br />
+
+        <!-- Campo para URLs -->
+        <label for="url">URL:</label>
+        <input type="url" id="url" placeholder="https://exemplo.com" /><br />
+
+        <!-- Campo para números de telefone -->
+        <label for="telefone">Telefone:</label>
+        <input
+          type="tel"
+          id="telefone"
+          placeholder="Digite seu telefone"
+        /><br />
+
+        <!-- Campo otimizado para buscas -->
+        <label for="pesquisa">Pesquisa:</label>
+        <input type="search" id="pesquisa" placeholder="Pesquisar" /><br />
+
+        <!-- Seletor de cores -->
+        <label for="cor">Cor:</label>
+        <input type="color" id="cor" /><br />
+      </form>
+    </main>
+
+    <footer>
+      <p>
+        &COPY; Copyright 2025 | Todos os direitos reservados - Raphael Rodrigues
+      </p>
+    </footer>
+
+    <script>
+      const rangeInput = document.getElementById("range");
+      const rangeValue = document.getElementById("rangeValue");
+      rangeInput.addEventListener("input", () => {
+        rangeValue.textContent = rangeInput.value;
+      });
+    </script>
+  </body>
+</html>
