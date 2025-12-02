@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+/* CSS reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header, footer {
+  background-color: #282828;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 10px 0;
+}
+
+div.container {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+div.quadrado {
+  width: 150px;
+  height: 150px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #000000;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 20px 20px 5px rgba(0, 0, 0, 0.3);
+  border: 8px dashed #000000;
+}
+
+div.quadrado.azul {
+  background-color: #0000FF;
+}
+
+div.quadrado.vermelho {
+  background-color: #FF0000;
+}
+
+div.quadrado.amarelo {
+  background-color: #FFFF00;
+  color: #000;
+}

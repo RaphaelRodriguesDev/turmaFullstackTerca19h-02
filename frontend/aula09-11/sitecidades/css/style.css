@@ -1,0 +1,232 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins/Poppins-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins/Poppins-ExtraBold.ttf");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins/Poppins-Light.ttf");
+  font-weight: light;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: light;
+}
+
+header.cabecalho div.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+div.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+nav.menu {
+  margin-top: 10px;
+}
+
+nav.menu ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+nav.menu ul li a {
+  color: #1a1a1a;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 17px;
+  transition: 0.3s;
+}
+
+nav.menu ul li a:hover {
+  color: #ff8000;
+}
+
+main.principal div.container-titulo {
+  width: 100%;
+  background-color: #ff8000;
+  padding: 15px;
+}
+
+main.principal div.container-titulo h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 48px;
+  text-transform: uppercase;
+}
+
+div.modulo {
+  width: 100%;
+  padding: 50px 0;
+} 
+
+div.sobre {
+  background-color: #ddd;
+}
+
+h2.subtitulo,
+div.container-btn {
+  font-size: 32px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.btn-saiba-mais {
+  background-color: #ff8000;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+.btn-saiba-mais:hover {
+  transform: scale(1.2);
+  filter: brightness(0.95);
+}
+
+.btn-saiba-mais a {
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+}
+
+/* Modulo Tabela */
+table.tabela {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table.tabela thead {
+  background-color: #333;
+  color: #fff;
+}
+
+table.tabela td,
+table.tabela th {
+  border: 1px solid #333;
+  padding: 7px;
+}
+
+/* Modulo Locais Interesse */
+div.lista-locais ul {
+  display: flex;
+  justify-content: center;
+}
+
+div.lista-locais ul li {
+  list-style: none;
+  display: inline-block;
+  color: #fff;
+  background-color: #ff8000;
+  padding: 7px 12px;
+  margin: 0 3px;
+  border-radius: 5px;
+}
+/* Rodapé */
+footer.rodape {
+  width: 100%;
+  padding: 50px 0;
+  background-color: #333;
+  background-image: url(../assets/img/padrao-fundo-rodape.png);
+  border-top: 6px solid #ff8000;
+  text-align: center;
+  clear: both;
+}
+
+footer.rodape div.logo {
+  margin-bottom: 30px;
+}
+
+footer.rodape div.creditos {
+  color: #fff;
+}
+
+/* Mapa */
+div.mapa {
+  width: 100%;
+}
+
+div.mapa iframe {
+  float: left;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Notáveis */
+div.notaveis {
+  float: left;
+  background-color: #f1f0f0;
+  margin-top: 20px;
+}
+
+div.notaveis ol {
+  font-size: 22px;
+  float: left;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Pagina Sugestão */
+
+div.sugestao-texto {
+  text-align: center;
+}
+
+div.form-container {
+  width: 100%;
+  margin: 15px 0;
+}
+
+input.form {
+  width: 100%;
+  min-height: 40px;
+  font-size: 17px;
+  text-indent: 10px;
+}
+
+textarea#sugestao {
+  width: 100%;
+}
+
+input.form-botao {
+  width: 100%;
+  padding: 15px 30px;
+  background-color: #ff8000;
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+input.form-botao:hover {
+  background-color: #ff8000;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sydney</title>
+    <!-- Altera icone da aba -->
+    <link rel="shortcut icon" href="./assets/icone.png" />
+    <!-- importa fonte do google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <header class="cabecalho">
+      <div class="container">
+        <div class="logo">
+          <a href="./index.html">
+            <img src="./assets/img/logo-cidades.png" alt="" />
+          </a>
+        </div>
+
+        <nav class="menu">
+          <ul>
+            <li><a href="./index.html">Ínicio</a></li>
+            <li><a href="./complemento.html">Complemento</a></li>
+            <li><a href="./sugestao.html">Sugestão</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="sugestao-texto">
+        <div class="container">
+          <p>Envie sua sugestão para publicarmos numa futura página</p>
+        </div>
+      </div>
+
+      <div class="sugestao-formulario">
+        <div class="container">
+          <form method="POST">
+            <div class="form-container">
+              <label for="nome">Nome:</label><br />
+              <input
+                type="text"
+                name="nome"
+                id="nome"
+                class="form"
+                placeholder="Insira seu nome"
+                required
+              />
+            </div>
+
+            <div class="form-container">
+              <label for="email">E-mail:</label><br />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="form"
+                placeholder="Ex. nome@provedor.com.br"
+                required
+              />
+            </div>
+
+            <div class="form-container">
+              <label for="telefone">Telefone:</label><br />
+              <input
+                type="tel"
+                name="telefone"
+                id="telefone"
+                class="form"
+                placeholder="Número de contato"
+                required
+              />
+            </div>
+
+            <div class="form-container">
+              <label for="sugestao">Justifique sua sugestao:</label> <br />
+              <textarea
+                name="sugestao"
+                id="sugestao"
+                rows="10"
+                class="form"
+                required
+              ></textarea>
+            </div>
+
+            <div class="form-container">
+              <!-- todo formulario usa um input type submit como botão -->
+              <input type="submit" class="form-botao" value="Enviar" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="rodape">
+      <div class="container">
+        <div class="logo">
+          <img
+            src="./assets/img/logo-cidades-rodape.png"
+            alt="Logo do rodapé"
+          />
+        </div>
+
+        <div class="creditos">
+          <p>&COPY; Copyright 2022 | &#128540; by Raphael Rodrigues</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
